@@ -1,7 +1,7 @@
 # Garbage Permission
 ### Introduction
 
-​就像项目的名字一样，这一个Garbage 的 `Permission` 请求类库. :joy: . 
+​就像项目的名字一样，这一个Garbage 的 `Permission` 请求类库. ​:joy:​ . 
 
 ### 展示展示效果图
 
@@ -47,7 +47,28 @@ GarbagePermission
 
 ### Add it into your project
 
+To get a Git project into your build:
 
+**Step 1.** Add the JitPack repository to your build file
+
+Add it in your root build.gradle at the end of repositories:
+
+```
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://www.jitpack.io' }
+		}
+	}
+```
+
+**Step 2.** Add the dependency
+
+```
+	dependencies {
+	        implementation 'com.github.littledavid-tech:GarbagePermission:Tag'
+	}
+```
 
 ### Thanks
 
