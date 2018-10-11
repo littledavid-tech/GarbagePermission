@@ -28,7 +28,7 @@ GarbagePermission
             override fun onDenied(permission: String) {
                 Log.e("TAG", "Denied")
             }
-          	//当权限被拒绝的时候但并非完全拒绝的时候，此方法被调用
+          	//当权限被拒绝的时候但并非完全拒绝的时候，此方法被调用 
             override fun onRationale(permission: String) {
                 Log.e("TAG", "Rationale")
             }
