@@ -19,7 +19,10 @@ class MainActivity : AppCompatActivity() {
     fun onClick(view: View) {
         GarbagePermission
                 .with(this)
-                .permissions(arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE))
+                .permissions(arrayOf(
+                        Manifest.permission.READ_EXTERNAL_STORAGE,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                        Manifest.permission.CALL_PHONE))
                 .callback(object : OnPermissionRequestListener {
                     override fun onGranted(permission: String) {
                         Log.e("TAG", "Granted")
@@ -35,14 +38,15 @@ class MainActivity : AppCompatActivity() {
                 })
                 .request()
 
-        GarbagePermission
-                .with(this)
-                .permissions(arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE))
-                .callback(object : SimpleOnPermissionRequestListener() {
-                    override fun onGranted(permission: String) {
-                        Log.e("TAG", "Granted")
-                    }
-                })
-                .request()
+//
+//        GarbagePermission
+//                .with(this)
+//                .permissions(arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE))
+//                .callback(object : SimpleOnPermissionRequestListener() {
+//                    override fun onGranted(permission: String) {
+//                        Log.e("TAG", "Granted")
+//                    }
+//                })
+//                .request()
     }
 }

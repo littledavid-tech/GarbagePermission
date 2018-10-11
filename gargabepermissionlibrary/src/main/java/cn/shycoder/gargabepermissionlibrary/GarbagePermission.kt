@@ -10,14 +10,14 @@ import cn.shycoder.garbagepermissionlibrary.callbacks.OnPermissionRequestListene
  * */
 class GarbagePermission private constructor(private val context: Context) {
 
-    private var mPermission: Array<String>? = null
+    private var mPermissions: Array<String>? = null
     private var mCallback: OnPermissionRequestListener? = null
 
     /**
      * 设置你要请求的权限
      * */
     fun permissions(permissions: Array<String>): GarbagePermission {
-        mPermission = permissions
+        mPermissions = permissions
         return this
     }
 
@@ -33,11 +33,11 @@ class GarbagePermission private constructor(private val context: Context) {
      * 开始请求权限
      * */
     fun request() {
-        if (mPermission == null) {
+        if (mPermissions == null) {
             throw  IllegalArgumentException("Please request permission")
         }
         if (Build.VERSION.SDK_INT >= 23) {
-            PermissionActivity.show(context, mPermission!!, mCallback)
+            PermissionActivity.show(context, mPermissions!!, mCallback)
         }
     }
 

@@ -39,8 +39,7 @@ class PermissionActivity : AppCompatActivity() {
         for ((index, value) in permissions.withIndex()) {
             if (grantResults[index] == PackageManager.PERMISSION_GRANTED) {//接受
                 mPermissionCallback?.onGranted(value)
-            }
-            if (shouldShowRequestPermissionRationale(value)) {//拒绝，但没有完全拒绝
+            } else if (shouldShowRequestPermissionRationale(value)) {//拒绝，但没有完全拒绝
                 mPermissionCallback?.onRationale(value)
             } else {//拒绝
                 mPermissionCallback?.onDenied(value)
