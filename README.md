@@ -20,12 +20,15 @@ GarbagePermission
                 Manifest.permission.WRITE_EXTERNAL_STORAGE,
                 Manifest.permission.CALL_PHONE))
         .callback(object : OnPermissionRequestListener {
+          	//当权限被同意的时候，此方法被调用
             override fun onGranted(permission: String) {
                 Log.e("TAG", "Granted")
             }
+          	//当权限被完全拒绝的时候(勾选了不再提醒复选框)，此方法被调用
             override fun onDenied(permission: String) {
                 Log.e("TAG", "Denied")
             }
+          	//当权限被拒绝的时候但并非完全拒绝的时候，此方法被调用
             override fun onRationale(permission: String) {
                 Log.e("TAG", "Rationale")
             }
@@ -66,7 +69,7 @@ Add it in your root build.gradle at the end of repositories:
 
 ```
 	dependencies {
-	        implementation 'com.github.littledavid-tech:GarbagePermission:Tag'
+	        implementation 'com.github.littledavid-tech:GarbagePermission:V1.0.1'
 	}
 ```
 
