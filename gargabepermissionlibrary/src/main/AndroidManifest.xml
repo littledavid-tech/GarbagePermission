@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.shycoder.gargabepermissionlibrary">
+
+    <application>
+        <!--<activity-->
+        <!--android:name=".PermissionActivity"-->
+        <!--android:theme="@style/Transparent" />-->
+        <activity
+            android:name=".PermissionActivity"
+            android:theme="@style/Transparent" />
+    </application>
+
+</manifest>
