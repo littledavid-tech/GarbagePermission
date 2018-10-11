@@ -1,7 +1,7 @@
 # Garbage Permission
 ### Introduction
 
-​就像项目的名字一样，这一个Garbage 的 `Permission` 请求类库. ​:joy:​ . 
+​就像项目的名字一样，这一个Garbage 的 `Permission` 请求类库. ​:joy:​ .  如果有任何的Bug和需求欢迎大家提交PR，在此拜谢。
 
 ### 展示展示效果图
 
